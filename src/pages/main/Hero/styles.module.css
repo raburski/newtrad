@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+
+    /* background: url('/images/poland.png');
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
