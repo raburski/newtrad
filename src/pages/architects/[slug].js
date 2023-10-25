@@ -1,14 +1,9 @@
 import NavBar from "@/components/NavBar"
 import Page from "@/components/Page"
-import { getAllArchitects } from "@/data/architects"
-
-async function getArchitect({ slug }) {
-    return {}
-}
+import { getAllArchitects, getArchitect } from "@/data/architects"
 
 export async function getStaticProps({ params }) {
     const architect = await getArchitect(params.slug)
-
     return {
       props: {
         architect,

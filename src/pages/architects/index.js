@@ -3,7 +3,6 @@ import Page from "@/components/Page"
 import { getAllArchitects } from "@/data/architects"
 import Link from "next/link"
 
-
 export async function getStaticProps() {
     const fileNames = await getAllArchitects()
 
@@ -14,13 +13,11 @@ export async function getStaticProps() {
     }
 }
 
-
-
 export default function Architects({ architects }) {
   return (
     <Page>
         <NavBar />
-        {architects.map(slug => <Link href={`/architects/${slug}`}>{slug}</Link>)}
+        {architects.map(({ slug, name }) => <Link key={slug} href={`/architects/${slug}`}>{name}</Link>)}
     </Page>
   )
 }
