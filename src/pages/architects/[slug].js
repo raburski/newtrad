@@ -1,6 +1,6 @@
 import NavBar from "@/components/NavBar"
 import Page from "@/components/Page"
-import { getAllArchitects } from "./data"
+import { getAllArchitects } from "@/data/architects"
 
 async function getArchitect({ slug }) {
     return {}
