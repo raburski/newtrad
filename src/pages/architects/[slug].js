@@ -12,10 +12,10 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-    const fileNames = await getAllArchitects()
+    const architects = await getAllArchitects()
 
     return {
-      paths: fileNames.map(slug => ({ params: { slug }})),
+      paths: architects.map(({ slug }) => ({ params: { slug }})),
       fallback: false,
     }
 }
